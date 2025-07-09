@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'app/routes/app_pages.dart';
-import 'app/theme/comic_theme.dart'; // 👈 import theme
+import 'app/theme/comic_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Albums App',
       initialRoute: AppPages.home,
       getPages: AppPages.routes,
-      theme: comicTheme, // 👈 gunakan tema komik
+      theme: comicTheme,
     );
   }
 }
