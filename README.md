@@ -72,8 +72,6 @@ flutter pub get
 flutter run
 ```
 
----
-
 ## ⚠️ Notes
 
 If failed to fetch data, please check:
@@ -82,11 +80,8 @@ If failed to fetch data, please check:
 - VPN/proxy ISP
 - Dio timeout or Android 9+ security policy
 
----
 
 ## 📃 License
 
 This project is for learning purposes only.  
 Feel free to fork, reuse, and modify with credit.
-
----
