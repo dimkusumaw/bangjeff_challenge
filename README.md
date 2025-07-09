@@ -57,14 +57,6 @@ Fallback image:
 
 - Flutter SDK installed
 - Emulator or Android device with internet
-- Run this command to fetch dependencies:
-
-## 🚀 Getting Started
-
-### ✅ Prerequisites
-
-- Flutter SDK installed
-- Emulator or Android device with internet
 - Run this command to fetch dependencies and run the app:
 
 ```bash
