@@ -59,19 +59,34 @@ Fallback image:
 - Emulator or Android device with internet
 - Run this command to fetch dependencies:
 
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+- Flutter SDK installed
+- Emulator or Android device with internet
+- Run this command to fetch dependencies and run the app:
+
 ```bash
 flutter pub get
 flutter run
+```
 
-⚠️ Notes
-If failed to fetch data please check:
+---
 
-Internet connection
-VPN/proxy ISP
-Dio timeout or Android 9+ security policy
+## ⚠️ Notes
 
+If failed to fetch data, please check:
 
-📃 License
+- Internet connection
+- VPN/proxy ISP
+- Dio timeout or Android 9+ security policy
 
-This project is for learning purposes only.
+---
+
+## 📃 License
+
+This project is for learning purposes only.  
 Feel free to fork, reuse, and modify with credit.
+
+---
