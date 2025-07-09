@@ -27,6 +27,8 @@ A BangJeff challenge app that displays albums, users, and photos using a comic-i
 - **JSONPlaceholder API** — public fake REST API
 
 ## 🛠️ Project Structure (Modularized)
+
+```
 lib/
 ├── app/
 │   ├── routes/         → GetX route definitions
@@ -38,6 +40,7 @@ lib/
 ├── services/           → API service using Dio
 ├── widgets/            → Reusable widgets (AlbumTile, PhotoGridItem)
 └── main.dart           → Entry point
+```
 
 ## 🌐 API Used
 
