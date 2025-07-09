@@ -63,12 +63,13 @@ Fallback image:
 flutter pub get
 flutter run
 
-## ⚠️ Notes
-
+⚠️ Notes
 If failed to fetch data please check:
-- Internet Connection
-- VPN/proxy ISP
-- Dio timeout/security policy Android 9+
+
+Internet connection
+VPN/proxy ISP
+Dio timeout or Android 9+ security policy
+
 
 📃 License
 
