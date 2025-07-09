@@ -19,7 +19,7 @@ class HomeController extends GetxController {
   }
 
   /// Ambil data album dan user dari API
-  Future fetchAlbumsAndUsers() async {
+  Future<void>  fetchAlbumsAndUsers() async {
     try {
       isLoading(true);
       final fetchedAlbums = await _apiService.getAlbums();

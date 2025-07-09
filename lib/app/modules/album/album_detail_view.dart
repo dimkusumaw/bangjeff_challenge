@@ -24,25 +24,30 @@ class AlbumDetailView extends GetView<AlbumDetailController> {
           return const Center(child: CircularProgressIndicator());
         }
 
-        return GridView.builder(
-          padding: const EdgeInsets.all(12),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            mainAxisSpacing: 12,
-            crossAxisSpacing: 12,
-            childAspectRatio: 0.75,
-          ),
-          itemCount: controller.photos.length,
-          itemBuilder: (context, index) {
-            final photo = controller.photos[index];
-
-            return PhotoGridItem(
-              photo: photo,
-              onTap: () {
-                Get.toNamed('/photo/${photo.id}');
-              },
-            );
+        return RefreshIndicator(
+          onRefresh: () async {
+            await controller.fetchPhotos();
           },
+          child: GridView.builder(
+            padding: const EdgeInsets.all(12),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              mainAxisSpacing: 12,
+              crossAxisSpacing: 12,
+              childAspectRatio: 0.75,
+            ),
+            itemCount: controller.photos.length,
+            itemBuilder: (context, index) {
+              final photo = controller.photos[index];
+
+              return PhotoGridItem(
+                photo: photo,
+                onTap: () {
+                  Get.toNamed('/photo/${photo.id}');
+                },
+              );
+            },
+          ),
         );
       }),
     );

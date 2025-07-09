@@ -18,7 +18,7 @@ class AlbumDetailController extends GetxController {
   }
 
   /// Ambil semua foto berdasarkan albumId
-  void fetchPhotos() async {
+  Future<void> fetchPhotos() async {
     try {
       isLoading(true);
       photos.value = await _apiService.getPhotosByAlbumId(albumId);
