@@ -27,7 +27,11 @@ class AlbumTile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.photo_library, size: 32, color: Color(0xFFEEEEEE)),
+              const Icon(
+                Icons.photo_library,
+                size: 32,
+                color: Color(0xFFEEEEEE),
+              ),
               const SizedBox(height: 8),
               Text(
                 album.title,
@@ -46,10 +50,7 @@ class AlbumTile extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: Color(0xFFEEEEEE),
-                ),
+                style: const TextStyle(fontSize: 12, color: Color(0xFFEEEEEE)),
               ),
             ],
           ),

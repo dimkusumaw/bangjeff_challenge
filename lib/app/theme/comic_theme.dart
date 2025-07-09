@@ -16,11 +16,7 @@ final ThemeData comicTheme = ThemeData(
         fontWeight: FontWeight.bold,
         color: Colors.black,
         shadows: [
-          Shadow(
-            offset: Offset(2, 2),
-            blurRadius: 0,
-            color: Colors.grey,
-          ),
+          Shadow(offset: Offset(2, 2), blurRadius: 0, color: Colors.grey),
         ],
       ),
     ),

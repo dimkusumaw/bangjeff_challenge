@@ -58,21 +58,21 @@ class ApiService {
     }
   }
 
-Future<Photo> getPhotoById(int id) async {
-  try {
-    final response = await _dio.get('/photos/$id');
-    return Photo.fromJson(response.data);
-  } on DioException catch (e) {
-    if (e.type == DioExceptionType.connectionTimeout ||
-        e.type == DioExceptionType.receiveTimeout) {
-      throw Exception('Connection timed out. Please try again later.');
-    } else if (e.type == DioExceptionType.unknown) {
-      throw Exception('No internet connection or unknown error.');
-    } else {
-      throw Exception('Failed to fetch photo');
+  Future<Photo> getPhotoById(int id) async {
+    try {
+      final response = await _dio.get('/photos/$id');
+      return Photo.fromJson(response.data);
+    } on DioException catch (e) {
+      if (e.type == DioExceptionType.connectionTimeout ||
+          e.type == DioExceptionType.receiveTimeout) {
+        throw Exception('Connection timed out. Please try again later.');
+      } else if (e.type == DioExceptionType.unknown) {
+        throw Exception('No internet connection or unknown error.');
+      } else {
+        throw Exception('Failed to fetch photo');
+      }
+    } catch (e) {
+      throw Exception('Unexpected error');
     }
-  } catch (e) {
-    throw Exception('Unexpected error');
   }
-}
 }
